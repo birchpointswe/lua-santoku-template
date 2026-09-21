@@ -17,7 +17,6 @@ local fs = require("santoku.fs")
 
 test("renderfile include chain wired through a shared env", function ()
 
-
   local env
   local function renderfile (fp)
     return compile(fs.readfile(fp))(env, _G)
@@ -31,7 +30,7 @@ end)
 test("serialize_deps emits makefile rule", function ()
   local deps = { ["a.html"] = true }
   local out = template.serialize_deps("main.html", "out.html", deps)
-  assert(eq(out, "main.html: a.html\nout.html: main.html"))
+  assert(eq(out, "main.html: a.html"))
 end)
 
 test("deserialize_deps round-trips the dep set", function ()

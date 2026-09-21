@@ -89,7 +89,6 @@ local function serialize_deps (source, dest, deps)
   local out = {}
   arr.push(out, source, ": ")
   arr.push(out, arr.spread(arr.interleaved(tbl.keys(deps), " ")))
-  arr.push(out, "\n", dest, ": ", source)
   return arr.concat(out)
 end
 
