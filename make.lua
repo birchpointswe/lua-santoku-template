@@ -6,6 +6,7 @@ local env = {
   variable_prefix = "TK_TEMPLATE",
   license = "MIT",
   copyright = "Birch Point SWE",
+  license_exclude = { "test/res/**" },
   public = true,
   dependencies = {
     "lua == 5.1",
