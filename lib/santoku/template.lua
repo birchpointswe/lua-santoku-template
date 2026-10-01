@@ -1,3 +1,5 @@
+-- SPDX-License-Identifier: MIT
+-- SPDX-FileCopyrightText: 2023 Birch Point SWE
 local err = require("santoku.error")
 local lua = require("santoku.lua")
 local lpeg = require("santoku.re.core")
